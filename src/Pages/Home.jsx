@@ -3,6 +3,7 @@ import Banner from "../Component/Banner";
 import { useLoaderData } from "react-router-dom";
 import Brand from "../Component/Brand";
 import About from "./About";
+import Whychoseus from "./Whychoseus";
 const Home = () => {
   const brands = useLoaderData();
   console.log(brands);
@@ -19,7 +20,7 @@ const Home = () => {
         </h1>
 
         <div className="flex justify-center items-center">
-        <p className="w-[600px] text-center mt-5 text-lg font-normal px-5 lg:px-0">
+        <p className="w-[700px] text-center mt-5  fon font-medium lg:text-lg px-5 lg:px-0">
           Discover the essence of BD Shop. Our brand stands for
           innovation, style, and uncompromising quality. Each product embodies
           our commitment to excellence, designed to elevate your lifestyle and
@@ -38,6 +39,10 @@ const Home = () => {
         <div>
 
             <About></About>
+        </div>
+
+        <div>
+            <Whychoseus></Whychoseus>
         </div>
     </>
   );

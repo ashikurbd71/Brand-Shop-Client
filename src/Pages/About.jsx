@@ -7,9 +7,20 @@ import img4 from "../assets/download (4).jpeg";
 const About = () => {
   return (
     <>
-      <h1 className="text-3xl text-center font-bold text-[#E2136E] my-10">
+      <h1 className="lg:text-3xl text-2xl text-center font-bold text-[#E2136E] my-10">
         What People Say About Us
       </h1>
+
+      <div className="flex justify-center">
+
+      <p className="w-[700px] fon font-medium lg:text-lg mb-10 text-center px-5 lg:px-0">
+        Welcome to BD shop, where passion meets purpose. As a brand
+        born from a vision to innovate, inspire, and empower, we strive to
+        redefine the way you experience. Discover
+        our journey, values, and the heart that fuels everything we do
+      </p>
+
+      </div>
 
       <div className="mx-auto gap-3 max-w-screen-xl grid gap grid-cols-1 px-5 lg:px-0 lg:grid-cols-4">
         <div className=" rounded-t-2xl p-5 bg-[#FFFFFF] border-2">
