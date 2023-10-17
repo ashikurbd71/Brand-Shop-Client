@@ -16,7 +16,7 @@ const Banner = () => {
         <h1 className="mb-5 lg:text-5xl text-3xl font text-[#E2136E] font-extrabold">Unleashing Creativity</h1>
 
          <div className="flex justify-center">
-        <p className="w-[700px] lg:text-xl text-lg font-medium ">
+        <p className="w-[700px] lg:text-xl text-lg font-medium px-5 lg:px-0 ">
           Welcome to our one-stop shop, where versatility meets variety! Explore
           a world of endless choices at BD shop. Discover the perfect blend of quality,
           style, and affordability as you navigate through our diverse product
