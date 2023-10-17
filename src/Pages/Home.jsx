@@ -2,6 +2,7 @@ import React from "react";
 import Banner from "../Component/Banner";
 import { useLoaderData } from "react-router-dom";
 import Brand from "../Component/Brand";
+import About from "./About";
 const Home = () => {
   const brands = useLoaderData();
   console.log(brands);
@@ -33,6 +34,11 @@ const Home = () => {
           ))}
         </div>
       </div>
+
+        <div>
+
+            <About></About>
+        </div>
     </>
   );
 };
