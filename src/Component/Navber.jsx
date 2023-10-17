@@ -62,7 +62,7 @@ const Navber = () => {
               </li>
             </ul>
           </div>
-           <Link to={"/"}> <div className='flex gap-1 items-center'>
+           <Link to={"/"}> <div className='flex  items-center'>
 
              <img src={logo} alt="" className='w-8 h-8' />
              <a  className="btn btn-ghost font-bold normal-case lg:text-3xl text-xl text-[#EEEEEE]">
