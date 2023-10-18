@@ -1,4 +1,4 @@
-import { GoogleAuthProvider, createUserWithEmailAndPassword, signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
+import { GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from 'firebase/auth';
 import React, {  createContext, useState } from 'react';
 import auth from '../../Firebase/Firebase';
 
@@ -38,12 +38,31 @@ const Authprovider = ({children}) => {
     }
 
 
+    // obsever
+
+    onAuthStateChanged(auth,users => {
+
+        setLoad(false)
+
+        setUser(users)
+    })
+
+    // siginout
+
+    const userlogout = () => {
+
+        return signOut(auth)
+    }
+
+
     const data = {
 
         user,
         createuser,
         userlogin,
-        userGooglesigin
+        userGooglesigin,
+        load,
+        userlogout
     }
 
     return (

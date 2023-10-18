@@ -49,7 +49,7 @@ import Detlais from '../Pages/Detlais';
             {
                 path:"/detlais/:id",
                 element:<Detlais></Detlais>,
-                loader:({params}) => fetch(`http://localhost:5000/products/${params.id}`)
+                loader:({params}) => fetch(`http://localhost:5000/details/${params.id}`)
 
              }
         ]

@@ -24,6 +24,8 @@ const Productcard = ({ product }) => {
             </h5>
           </a>
 
+            {product?.description}
+
            <div className="flex justify-between items-center my-3">
               <div>
                 <span className="text-xl font-semibold">Type :</span> <span className="text-lg font-medium"> {product?.type}</span>

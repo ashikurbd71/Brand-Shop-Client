@@ -1,7 +1,8 @@
-import React from 'react';
+
 import { Outlet } from 'react-router-dom';
 import Navber from '../Component/Navber';
 import Footer from '../Component/Footer';
+import { Toaster } from 'react-hot-toast';
 
 
 const Layout = () => {
@@ -14,7 +15,11 @@ const Layout = () => {
          </div>
 
          <Footer></Footer>
+
+         <Toaster></Toaster>
         </div>
+
+    
     );
 };
 
