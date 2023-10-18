@@ -30,8 +30,8 @@ const Home = () => {
       
 
         <div className="grid lg:grid-cols-3 grid-cols-1 mx-auto gap-4 px-5 lg:px-0  my-10 max-w-screen-xl">
-          {brands.map((brand) => (
-            <Brand brand={brand} key={brand.id}></Brand>
+          {brands?.map((brand) => (
+            <Brand brand={brand} key={brand?.id}></Brand>
           ))}
         </div>
       </div>

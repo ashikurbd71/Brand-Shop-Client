@@ -6,6 +6,9 @@ import Addproduct from '../Pages/Addproduct';
 import Mycart from '../Pages/Mycart';
 import Login from '../Form/Login';
 import Register from '../Form/Register';
+import Products from '../Pages/Products';
+import Update from '../Pages/Update';
+import Detlais from '../Pages/Detlais';
 
  const router = createBrowserRouter([
     {
@@ -15,7 +18,7 @@ import Register from '../Form/Register';
             {
                 path:"/",
                 element:<Home></Home>,
-                loader: () => fetch('brand.json')
+                loader: () => fetch('/brand.json')
                 
             },
             {
@@ -31,9 +34,22 @@ import Register from '../Form/Register';
                 element:<Login></Login>
             },
             {
-                path:'register',
+                path:'/register',
                 element:<Register></Register>
-            }
+            },
+            {
+                path:'/products/:brand',
+                element:<Products></Products>,
+                loader:({params}) => fetch(`http://localhost:5000/products/${params.brand}`)
+            },
+            {
+               path:"/update",
+               element:<Update></Update>
+            },
+            {
+                path:"/detlais/:id",
+                element:<Detlais></Detlais>
+             }
         ]
     }
  ])

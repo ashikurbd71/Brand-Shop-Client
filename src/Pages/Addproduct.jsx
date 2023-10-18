@@ -1,6 +1,42 @@
 import React from 'react';
 
 const Addproduct = () => {
+
+
+ const handleadd = e => {
+    e.preventDefault()
+    const name = e.target.name.value
+    const brand = e.target.brand.value.toLowerCase()
+    const type = e.target.type.value
+    const price = e.target.price.value
+    const description = e.target.description.value
+    const ratting = e.target.ratting.value
+    const photo = e.target.photo.value
+
+    const productinfo = {
+        name,brand,type,price,description,ratting,photo
+    }
+    console.log(productinfo)
+
+
+    fetch('http://localhost:5000/products',{
+
+    method:'POST',
+    headers:{
+
+        'Content-Type' : 'application/json'
+    },
+    body:JSON.stringify(productinfo)
+    })
+
+    .then(res => res.json())
+    .then(data => console.log(data))
+
+ }
+
+ 
+
+
     return (
         <div>
            
@@ -16,7 +52,7 @@ const Addproduct = () => {
           </p>
         </div>
 
-        <form>
+        <form onSubmit={handleadd}>
 
          <div className="md:flex mx-10 mb-5">
 
@@ -26,7 +62,7 @@ const Addproduct = () => {
   </label>
   <label className="input-group">
 
-    <input type="text" placeholder="Enter product name" name="Name" className="input input-bordered w-full" />
+    <input type="text" placeholder="Enter product name" name="name" className="input input-bordered w-full" />
   </label>
 </div>
 
@@ -36,7 +72,7 @@ const Addproduct = () => {
   </label>
   <label className="input-group">
 
-    <input type="text" placeholder="Enter Brand Name" name="Brand-Name" className="input input-bordered w-full" />
+    <input type="text" placeholder="Enter Brand Name" name="brand" className="input input-bordered w-full" />
   </label>
 </div>
 
@@ -51,7 +87,7 @@ const Addproduct = () => {
   </label>
   <label className="input-group">
 
-    <input type="text" placeholder="Enter Type" name="Type" className="input input-bordered w-full" />
+    <input type="text" placeholder="Enter Type" name="type" className="input input-bordered w-full" />
   </label>
 </div>
 
@@ -61,7 +97,7 @@ const Addproduct = () => {
   </label>
   <label className="input-group">
 
-    <input type="text" placeholder="Enter Price" name="Price" className="input input-bordered w-full" />
+    <input type="text" placeholder="Enter Price" name="price" className="input input-bordered w-full" />
   </label>
 </div>
 
@@ -76,7 +112,7 @@ const Addproduct = () => {
 </label>
 <label className="input-group">
 
-<input type="text" placeholder="Enter short description" name="short-description" className="input input-bordered w-full" />
+<input type="text" placeholder="Enter short description" name="description" className="input input-bordered w-full" />
 </label>
 </div>
 
@@ -86,7 +122,7 @@ const Addproduct = () => {
 </label>
 <label className="input-group">
 
-<input type="text" placeholder="Enter Ratting" name="Ratting" className="input input-bordered w-full" />
+<input type="text" placeholder="Enter Ratting" name="ratting" className="input input-bordered w-full" />
 </label>
 </div>
 
@@ -98,7 +134,7 @@ const Addproduct = () => {
 </label>
 <label className="input-group">
 
-<input type="text" placeholder="Enter photo URL" name="Photo" className="input input-bordered w-full" />
+<input type="text" placeholder="Enter photo URL" name="photo" className="input input-bordered w-full" />
 </label>
 </div>
 
