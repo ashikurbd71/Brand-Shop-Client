@@ -7,6 +7,8 @@ const Products = () => {
     const productsdata = useLoaderData()
     
     console.log(productsdata)
+
+    
     
     return (
         <div className=' min-h-screen mx-auto max-w-screen-xl my-10'>

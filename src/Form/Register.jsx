@@ -1,21 +1,53 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { Authcontext } from '../Component/Authprovider/Authprovider';
 
 const Register = () => {
+
+
+   const {createuser} = useContext(Authcontext)
+
+
+    const handleregister = e => {
+
+      e.preventDefault()
+
+      const name = e.target.name.value
+      const email = e.target.email.value
+      const password = e.target.password.value
+
+      console.log(name,email,password)
+      createuser(email,password)
+      .then((userCredential) => {
+        // Signed up 
+        const user = userCredential.user;
+
+        console.log(user)
+        // ...
+      })
+      .catch((error) => {
+       
+        console.log(error)
+    
+        // ..
+      });
+
+    }
+
     return (
         <div>
               <div className="px-5 lg:px-0 my-10 min-h min-h-screen flex justify-center items-center">
         <div className="w-full max-w-sm p-4 bg-[#E2136E] border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700" data-aos="fade-right"
      data-aos-offset="300"
      data-aos-easing="ease-in-sine">
-          <form className="space-y-6" action="#">
+          <form className="space-y-6"  onSubmit={handleregister}>
             <h5 className="text-[30px] font-bold text-black  dark:text-white text-center">
               Register your account
             </h5>
 
             <div>
               <label
-                htmlFor="email"
+                htmlFor="text"
                 className="block mb-2    dark:text-white  text-[#fff] font-semibold text-[20px]"
               >
                  Your Number
@@ -23,8 +55,8 @@ const Register = () => {
               <input
                 type="text"
                 name="name"
-                // ref={emailRef}
-                id="email"
+             
+                id="name"
                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
                 placeholder="Enter your email address"
                 required
@@ -43,7 +75,7 @@ const Register = () => {
               <input
                 type="email"
                 name="email"
-                // ref={emailRef}
+               
                 id="email"
                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
                 placeholder="Enter your email address"

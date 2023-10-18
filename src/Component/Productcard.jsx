@@ -3,6 +3,10 @@ import { Link } from "react-router-dom";
 
 const Productcard = ({ product }) => {
   console.log(product);
+
+  
+
+
   return (
     <div>
       <div className="w-full  bg-[#E2136E] border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
@@ -103,6 +107,7 @@ const Productcard = ({ product }) => {
           </div>
         </div>
       </div>
+    
     </div>
   );
 };

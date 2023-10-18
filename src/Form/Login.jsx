@@ -1,14 +1,44 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { Authcontext } from '../Component/Authprovider/Authprovider';
 
 const Login = () => {
+
+   const {userlogin} = useContext(Authcontext)
+
+  const handleregister = e => {
+
+    e.preventDefault()
+
+  
+    const email = e.target.email.value
+    const password = e.target.password.value
+
+    console.log(email,password)
+  
+    userlogin(email,password)
+    .then((userCredential) => {
+      // Signed up 
+      const user = userCredential.user;
+
+      console.log(user)
+      // ...
+    })
+    .catch((error) => {
+     
+      console.log(error)
+  
+      // ..
+    });
+
+  }
     return (
         <div>
              <div className="px-5 lg:px-0 my-10 min-h min-h-screen flex justify-center items-center">
         <div className="w-full max-w-sm p-4 bg-[#E2136E] border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700" data-aos="fade-right"
      data-aos-offset="300"
      data-aos-easing="ease-in-sine">
-          <form className="space-y-6" action="#">
+          <form className="space-y-6" action="#" onSubmit={handleregister}>
             <h5 className="text-[30px] font-bold text-black  dark:text-white text-center">
               Login your account
             </h5>
