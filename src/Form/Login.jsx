@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { Authcontext } from '../Component/Authprovider/Authprovider';
+import Media from './Media';
 
 const Login = () => {
 
@@ -121,7 +122,7 @@ const Login = () => {
                 </a>
               </Link>
             </div>
-            {/* <Media></Media> */}
+            <Media></Media>
           </form>
         </div>
       </div>
