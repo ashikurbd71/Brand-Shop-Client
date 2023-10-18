@@ -1,6 +1,14 @@
 import React from 'react';
+import toast from 'react-hot-toast';
+import { useLoaderData } from 'react-router-dom';
 
 const Update = () => {
+
+
+   const updatedata = useLoaderData()
+
+   console.log(updatedata)
+
     const handleupdate = e => {
         e.preventDefault()
         const name = e.target.name.value
@@ -17,7 +25,7 @@ const Update = () => {
         console.log(productinfo)
     
     
-        fetch('http://localhost:5000/products',{
+        fetch(`http://localhost:5000/details/${updatedata?._id}`,{
     
         method:'PUT',
         headers:{
@@ -28,7 +36,14 @@ const Update = () => {
         })
     
         .then(res => res.json())
-        .then(data => console.log(data))
+        .then(data =>{
+
+           console.log(data)
+
+           if(data.modifiedCount > 0){
+            toast.success('Product Update Successfuly!')
+           }
+        })
     
      }
     
@@ -60,7 +75,7 @@ const Update = () => {
       </label>
       <label className="input-group">
     
-        <input type="text" placeholder="Enter product name" name="name"  className="input input-bordered w-full" />
+        <input type="text" placeholder="Enter product name" name="name" defaultValue={updatedata?.name}  className="input input-bordered w-full" />
       </label>
     </div>
     
@@ -70,7 +85,7 @@ const Update = () => {
       </label>
       <label className="input-group">
     
-        <input type="text" placeholder="Enter Brand Name" name="brand" className="input input-bordered w-full" />
+        <input type="text" placeholder="Enter Brand Name" defaultValue={updatedata?.brand} name="brand" className="input input-bordered w-full" />
       </label>
     </div>
     
@@ -85,7 +100,7 @@ const Update = () => {
       </label>
       <label className="input-group">
     
-        <input type="text" placeholder="Enter Type" name="type" className="input input-bordered w-full" />
+        <input type="text" placeholder="Enter Type" defaultValue={updatedata?.type} name="type" className="input input-bordered w-full" />
       </label>
     </div>
     
@@ -95,7 +110,7 @@ const Update = () => {
       </label>
       <label className="input-group">
     
-        <input type="text" placeholder="Enter Price" name="price" className="input input-bordered w-full" />
+        <input type="text" placeholder="Enter Price" defaultValue={updatedata?.price} name="price" className="input input-bordered w-full" />
       </label>
     </div>
     
@@ -110,7 +125,7 @@ const Update = () => {
     </label>
     <label className="input-group">
     
-    <input type="text" placeholder="Enter short description" name="description" className="input input-bordered w-full" />
+    <input type="text" placeholder="Enter short description" defaultValue={updatedata?.description} name="description" className="input input-bordered w-full" />
     </label>
     </div>
     
@@ -120,7 +135,7 @@ const Update = () => {
     </label>
     <label className="input-group">
     
-    <input type="text" placeholder="Enter Ratting" name="ratting" className="input input-bordered w-full" />
+    <input type="text" placeholder="Enter Ratting" defaultValue={updatedata?.ratting} name="ratting" className="input input-bordered w-full" />
     </label>
     </div>
     
@@ -132,7 +147,7 @@ const Update = () => {
     </label>
     <label className="input-group">
     
-    <input type="text" placeholder="Enter photo URL" name="photo" className="input input-bordered w-full" />
+    <input type="text" placeholder="Enter photo URL" defaultValue={updatedata?.photo} name="photo" className="input input-bordered w-full" />
     </label>
     </div>
     
