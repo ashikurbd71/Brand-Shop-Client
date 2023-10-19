@@ -17,8 +17,8 @@ const Whychoseus = () => {
         </p>
       </div>
 
-      <img src={why} alt="" className="h-[500px] w-full" />
-      <div className="grid lg:grid-cols-4 grid-cols-1">
+      <img src={why} alt="" className="h-[500px] w-full px-5 lg:px-0 mb-5 lg:mb-0" />
+      <div className="grid lg:grid-cols-4 grid-cols-1 px-5 lg:px-0 gap-5 lg:gap-0">
         <div className=" rounded-none p-5 bg-[#FFFFFF] border-2">
           <div>
             <h1 className="text-[#E2136E] text-2xl  mb-5 font-bold">

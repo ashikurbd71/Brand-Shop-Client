@@ -1,15 +1,40 @@
 import React, { useContext } from 'react';
 import { Authcontext } from '../Component/Authprovider/Authprovider';
 import { FaGoogle } from 'react-icons/fa';
+import { useLocation, useNavigate } from 'react-router-dom';
+import toast from 'react-hot-toast';
 
 const Media = () => {
 
     const{userGooglesigin} = useContext(Authcontext)
 
+    const location = useLocation()
+    const navigate = useNavigate()
 
      const handleprovider = media => {
 
         userGooglesigin(media)
+        .then(result => {
+          // Signed up 
+          const user = result.user;
+          console.log(user)
+   
+          toast.success("Successfully login")
+        
+          navigate(location?.state ? location?.state : "/")
+        
+          // ...
+        })
+        .catch((error) => {
+         
+          console.log(error)
+          return toast.error(error.message);
+        
+      
+          // ..
+        });
+
+
      }
     return (
         <div>

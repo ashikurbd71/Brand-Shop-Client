@@ -1,11 +1,17 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Authcontext } from '../Component/Authprovider/Authprovider';
 import Media from './Media';
+import toast from 'react-hot-toast';
+
 
 const Login = () => {
 
+
    const {userlogin} = useContext(Authcontext)
+
+   const location = useLocation()
+   const navigate = useNavigate()
 
   const handleregister = e => {
 
@@ -15,19 +21,32 @@ const Login = () => {
     const email = e.target.email.value
     const password = e.target.password.value
 
+    if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)) {
+      return toast.error("provide right email!");
+    }
+
+    if (password.length < 6) {
+      return toast.error("password must be 6 chracter!");
+    }
     console.log(email,password)
   
     userlogin(email,password)
-    .then((userCredential) => {
+    .then(result => {
       // Signed up 
-      const user = userCredential.user;
-
+      const user = result.user;
       console.log(user)
+      e.target.reset()
+      toast.success("Successfully login")
+    
+      navigate(location?.state ? location?.state : "/")
+    
       // ...
     })
     .catch((error) => {
      
       console.log(error)
+      return toast.error(error.message);
+    
   
       // ..
     });

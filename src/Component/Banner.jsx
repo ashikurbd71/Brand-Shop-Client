@@ -3,7 +3,7 @@ import cover from "../assets/cover-1.jpg";
 const Banner = () => {
   return (
     <div
-      className=" min-h-screen w-full bg-blend-overlay bg-opacity-90 "
+      className=" min-h-screen w-full bg-blend-overlay bg-opacity-90  bg-fixed"
       style={{
         backgroundImage: `url(${cover})`,
         backgroundSize: "cover",
@@ -25,7 +25,7 @@ const Banner = () => {
         </p>
         </div>
 
- <div className="mt-10 flex justify-center items-center mr-20">
+ <div className="mt-10 pb-10 flex justify-center items-center mr-20">
 
  <div>
  <input type="text" placeholder="serach product" className="input input-bordered rounded-none lg:w-[400px] pr-16" /> 

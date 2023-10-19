@@ -2,19 +2,32 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { Authcontext } from '../Component/Authprovider/Authprovider';
 import Media from './Media';
+import toast from 'react-hot-toast';
 const Register = () => {
 
 
-   const {createuser} = useContext(Authcontext)
+   const {createuser,updateuser} = useContext(Authcontext)
 
 
     const handleregister = e => {
 
       e.preventDefault()
 
-      const name = e.target.name.value
+      const name = e.target.value
+      const photo = e.target.value
       const email = e.target.email.value
       const password = e.target.password.value
+
+      updateuser(name,photo)
+
+
+       if (password.length < 6) {
+      return toast.error("Password Must Be 6 Chracter!");
+    } else if (!/[A-Z]/.test(password)) {
+      return toast.error("one letter must be upercase!");
+    } else if (!/[\W_]/.test(password)) {
+      return toast.error("one letter must be  special character!");
+    }
 
       console.log(name,email,password)
       createuser(email,password)
@@ -23,11 +36,14 @@ const Register = () => {
         const user = userCredential.user;
 
         console.log(user)
+        e.target.reset()
+        toast.success("Successfully Registaion!!")
         // ...
       })
       .catch((error) => {
        
         console.log(error)
+        return toast.error(error.message);
     
         // ..
       });
@@ -55,6 +71,24 @@ const Register = () => {
               <input
                 type="text"
                 name="name"
+             
+                id="name"
+                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                placeholder="Enter your email address"
+                required
+              />
+            </div>
+
+            <div>
+              <label
+                htmlFor="text"
+                className="block mb-2    dark:text-white  text-[#fff] font-semibold text-[20px]"
+              >
+                 Photo URL
+              </label>
+              <input
+                type="text"
+                name="photo"
              
                 id="name"
                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"

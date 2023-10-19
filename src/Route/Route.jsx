@@ -10,6 +10,7 @@ import Products from '../Pages/Products';
 import Update from '../Pages/Update';
 import Detlais from '../Pages/Detlais';
 import Error from '../Component/Error';
+import Privteroute from '../Pages/Privteroute';
 
  const router = createBrowserRouter([
     {
@@ -25,11 +26,11 @@ import Error from '../Component/Error';
             },
             {
                 path:"/addproduct",
-                element:<Addproduct></Addproduct>
+                element:<Privteroute><Addproduct></Addproduct></Privteroute>
             },
             {
                 path:"/mycart",
-                element:<Mycart></Mycart>,
+                element:<Privteroute><Mycart></Mycart></Privteroute>,
                 loader:() => fetch('http://localhost:5000/carts')
             },
             {
@@ -53,7 +54,7 @@ import Error from '../Component/Error';
             },
             {
                 path:"/detlais/:id",
-                element:<Detlais></Detlais>,
+                element:<Privteroute><Detlais></Detlais></Privteroute>,
                 loader:({params}) => fetch(`http://localhost:5000/details/${params.id}`)
 
              }

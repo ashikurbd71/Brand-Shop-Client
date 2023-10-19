@@ -1,5 +1,5 @@
-import { GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from 'firebase/auth';
-import React, {  createContext, useState } from 'react';
+import { GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateCurrentUser, updateProfile } from 'firebase/auth';
+import React, {  createContext, useEffect, useState } from 'react';
 import auth from '../../Firebase/Firebase';
 
 
@@ -40,18 +40,30 @@ const Authprovider = ({children}) => {
 
     // obsever
 
-    onAuthStateChanged(auth,users => {
-
-        setLoad(false)
-
-        setUser(users)
-    })
+    useEffect(()=>{
+        const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
+            setUser(currentUser)
+            setLoad(false)
+        })
+        return (() =>{
+            unSubscribe()
+        })
+    },[])
 
     // siginout
 
     const userlogout = () => {
 
         return signOut(auth)
+    }
+
+    // updateuser
+
+    const updateuser = (name,photo) => {
+
+        return updateProfile(auth .currentUser, {
+            displayName: `${name}`, photoURL: `${photo}`
+          })
     }
 
 
@@ -62,7 +74,8 @@ const Authprovider = ({children}) => {
         userlogin,
         userGooglesigin,
         load,
-        userlogout
+        userlogout,
+        updateuser
     }
 
     return (
