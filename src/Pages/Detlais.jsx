@@ -1,7 +1,7 @@
 import React from 'react';
 import toast from 'react-hot-toast';
 import { Link, useLoaderData } from 'react-router-dom';
-
+import islide from '../assets/islide.jpeg'
 const Detlais = () => {
 
     const singledata = useLoaderData()
@@ -30,7 +30,14 @@ const Detlais = () => {
         })
       }
     return (
+
+
+          <>
+
+
         <div className='min-h- min-h-screen mx-auto max-w-screen-xl my-10 px-5 lg:px-0'>
+
+
 
             <div>
 
@@ -116,6 +123,10 @@ const Detlais = () => {
             </div>
 
         </div>
+
+      
+
+</>
     );
 };
 

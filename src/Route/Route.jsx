@@ -48,7 +48,7 @@ import Privteroute from '../Pages/Privteroute';
             },
             {
                path:"/update/:id",
-               element:<Update></Update>,
+               element:<Privteroute><Update></Update></Privteroute>,
                loader: ({params}) => fetch(`http://localhost:5000/details/${params.id}`)
                
             },

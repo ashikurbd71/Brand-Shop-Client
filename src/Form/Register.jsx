@@ -13,12 +13,12 @@ const Register = () => {
 
       e.preventDefault()
 
-      const name = e.target.value
-      const photo = e.target.value
+      const name = e.target.name.value
+      const photo = e.target.photo.value
       const email = e.target.email.value
       const password = e.target.password.value
 
-      updateuser(name,photo)
+      
 
 
        if (password.length < 6) {
@@ -34,6 +34,8 @@ const Register = () => {
       .then((userCredential) => {
         // Signed up 
         const user = userCredential.user;
+
+        updateuser(name,photo)
 
         console.log(user)
         e.target.reset()
