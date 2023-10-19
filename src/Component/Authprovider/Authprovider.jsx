@@ -59,13 +59,13 @@ const Authprovider = ({children}) => {
 
     // updateuser
 
-    const updateuser = (name,photo) => {
+    // const updateuser = (name,photo) => {
 
-        return updateProfile(auth .currentUser, {
-            displayName: name,
-             photoURL: photo
-          })
-    }
+    //     return updateProfile(auth .currentUser, {
+    //         displayName: name,
+    //          photoURL: photo
+    //       })
+    // }
 
 
     const data = {
@@ -76,7 +76,7 @@ const Authprovider = ({children}) => {
         userGooglesigin,
         load,
         userlogout,
-        updateuser
+    
     }
 
     return (

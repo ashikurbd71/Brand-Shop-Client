@@ -3,10 +3,12 @@ import { Link } from 'react-router-dom';
 import { Authcontext } from '../Component/Authprovider/Authprovider';
 import Media from './Media';
 import toast from 'react-hot-toast';
+import { updateProfile } from 'firebase/auth';
+import auth from '../Firebase/Firebase';
 const Register = () => {
 
 
-   const {createuser,updateuser} = useContext(Authcontext)
+   const {createuser} = useContext(Authcontext)
 
 
     const handleregister = e => {
@@ -35,7 +37,17 @@ const Register = () => {
         // Signed up 
         const user = userCredential.user;
 
-        updateuser(name,photo)
+        const currentUser = user
+
+        
+
+        updateProfile(currentUser,{
+                  displayName: name,
+                   photoURL: photo
+                })
+
+                .then(result => console.log(result.user))
+                .then(error => console.log(error))
 
         console.log(user)
         e.target.reset()
@@ -92,7 +104,7 @@ const Register = () => {
                 type="text"
                 name="photo"
              
-                id="name"
+                id="photo"
                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
                 placeholder="Enter your email address"
                 required

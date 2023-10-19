@@ -7,6 +7,7 @@ import img4 from "../assets/download (4).jpeg";
 const About = () => {
   return (
     <>
+    <div className="dark:bg-black ">
       <h1 className="lg:text-3xl text-2xl text-center font-bold text-[#E2136E] my-10">
         What People Say About Us
       </h1>
@@ -22,9 +23,9 @@ const About = () => {
 
       </div>
 
-      <div className="mx-auto gap-3 max-w-screen-xl grid gap grid-cols-1 px-5 lg:px-0 lg:grid-cols-4">
-        <div className=" rounded-t-2xl p-5 bg-[#FFFFFF] border-2">
-          <div>
+      <div className="mx-auto gap-3 max-w-screen-xl grid gap grid-cols-1  px-5 lg:px-0 lg:grid-cols-4">
+        <div className=" rounded-t-2xl p-5 bg-[#FFFFFF] dark:bg-black border-2">
+          <div clas>
             <p className=" text-[#E2136E] font-medium">
               Wow, I'm already in love with the idea of a brand that values
               innovation and style. Can't wait to explore your unique products!
@@ -70,7 +71,7 @@ const About = () => {
           </div>
         </div>
 
-        <div className=" rou rounded-t-2xl grid p-5 bg-[#FFFFFF] border-2">
+        <div className=" rou rounded-t-2xl grid p-5 bg-[#FFFFFF] dark:bg-black border-2">
           <div>
             <p className=" text-[#E2136E] font-medium">
               Impressive commitment to quality and craftsmanship! Your brand
@@ -117,7 +118,7 @@ const About = () => {
           </div>
         </div>
 
-        <div className=" rou rounded-t-2xl p-5 bg-[#FFFFFF] border-2">
+        <div className=" rou rounded-t-2xl p-5 bg-[#FFFFFF] dark:bg-black border-2">
           <div>
             <p className=" text-[#E2136E] font-medium">
               Elegance and variety in one place? Count me in! Looking forward to
@@ -164,7 +165,7 @@ const About = () => {
           </div>
         </div>
 
-        <div className=" rou rounded-t-2xl p-5 bg-[#FFFFFF] border-2">
+        <div className=" rou rounded-t-2xl p-5 bg-[#FFFFFF] dark:bg-black border-2">
           <div>
             <p className=" text-[#E2136E] font-medium">
               Your brand description has piqued my interest. I'm always on the
@@ -211,6 +212,8 @@ const About = () => {
             </div>
           </div>
         </div>
+      </div>
+
       </div>
     </>
   );

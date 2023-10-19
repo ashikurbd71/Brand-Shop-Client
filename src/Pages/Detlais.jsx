@@ -8,6 +8,25 @@ const Detlais = () => {
 
       console.log(singledata)
 
+      const name = singledata?.name
+      const photo = singledata?.photo
+      const type = singledata?.type
+      const description = singledata?.description
+      const brand = singledata?.brand
+      const ratting = singledata?.ratting
+      const price = singledata?.price
+
+      const userdata = {
+
+        name,
+        photo,
+        type,
+        description,
+        brand,
+        ratting,
+        price
+      }
+
       const handlecart = () => {
 
         console.log('cart added')
@@ -20,7 +39,7 @@ const Detlais = () => {
           'Content-Type' : 'application/json'
         },
 
-        body:JSON.stringify(singledata)
+        body:JSON.stringify(userdata)
         })
         .then(res => res.json())
         .then(data => {
@@ -35,14 +54,14 @@ const Detlais = () => {
           <>
 
 
-        <div className='min-h- min-h-screen mx-auto max-w-screen-xl my-10 px-5 lg:px-0'>
+        <div className=' min-h-screen mx-auto max-w-screen-xl my-10 px-5 lg:px-0'>
 
 
 
             <div>
 
-            <div className="card card-side bg-base-100 shadow-xl border-2">
-  <figure><img src={singledata?.photo} className='w-[400px] h-[300px]' alt="Movie"/></figure>
+            <div className="card lg:card-side bg-base-100 dark:bg-black shadow-xl border-2 my-20">
+  <figure><img src={singledata?.photo} className='w-[400px] h-[300px] p-10' alt="Movie"/></figure>
   <div className="card-body">
     <h2 className="card-title">{singledata?.name}</h2>
 

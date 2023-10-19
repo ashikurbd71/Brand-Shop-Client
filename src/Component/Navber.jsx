@@ -1,11 +1,29 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import logo from '../assets/logo.png'
 import { Authcontext } from './Authprovider/Authprovider';
+import { CiLight } from 'react-icons/ci';
+import { MdDarkMode } from 'react-icons/md';
 
 import userpic from'../assets/user.png'
 
 const Navber = () => {
+
+ const[drakmode,setDrakmode] = useState(false)
+
+
+useEffect(() => {
+
+if(drakmode){
+
+  document.documentElement.classList.add('dark')
+}else{
+  document.documentElement.classList.remove('dark')
+}
+
+},[drakmode])
+
+
   const{user,userlogout} = useContext(Authcontext)
 
   const handlelogout = () => {
@@ -84,11 +102,11 @@ const Navber = () => {
               </li>
             </ul>
           </div>
-           <Link to={"/"}> <div className='flex  items-center'>
+           <Link to={"/"}> <div className='flex items-center'>
 
-             <img src={logo} alt="" className='w-8 h-8' />
-             <a  className="btn btn-ghost font-bold normal-case lg:text-3xl text-xl text-[#EEEEEE]">
-            BD <span className="lg:text-2xl text-lg text-black">Shop</span>
+             <img src={logo} alt="" className='w-10 h-10' />
+             <a  className=" font-bold normal-case lg:text-3xl text-xl text-[#EEEEEE]">
+            BD <span className="lg:text-3xl text-lg text-black">SHOP</span>
           </a>
             </div> </Link>
         </div>
@@ -133,10 +151,14 @@ const Navber = () => {
         </div>
         <div className="navbar-end">
 
-          <div>
+          <div className='mr-6 text-4xl'>
 
     
+    <button onClick={() => setDrakmode(!drakmode)}>
 
+ {
+  drakmode? <CiLight></CiLight> : <MdDarkMode></MdDarkMode>}
+    </button>
       
 
          

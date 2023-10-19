@@ -3,7 +3,7 @@ import cover from "../assets/cover-1.jpg";
 const Banner = () => {
   return (
     <div
-      className=" min-h-screen w-full bg-blend-overlay bg-opacity-90  bg-fixed"
+      className=" min-h-screen w-full bg-blend-overlay bg-opacity-90 dark:bg-black   bg-fixed"
       style={{
         backgroundImage: `url(${cover})`,
         backgroundSize: "cover",

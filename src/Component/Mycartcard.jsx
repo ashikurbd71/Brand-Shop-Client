@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Swal from 'sweetalert2'
 
-const Mycartcard = ({card}) => {
+const Mycartcard = ({card,setDelete,deletes}) => {
 
     // console.log(card)
 
@@ -11,14 +12,51 @@ const Mycartcard = ({card}) => {
 
          console.log('delete',_id)
 
-         fetch(`http://localhost:5000/carts/${_id}`, {
+         Swal.fire({
+          title: 'Are you sure?',
+          text: "You won't be able to revert this!",
+          icon: 'warning',
+          showCancelButton: true,
+          confirmButtonColor: '#3085d6',
+          cancelButtonColor: '#d33',
+          confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+          if (result.isConfirmed) {
+           
+
+            fetch(`http://localhost:5000/users/${_id}`, {
 
        
-         method: 'DELETE'
+            method: 'DELETE'
+   
+            }).then(res => res.json())
+            .then(data => {
+             
+             console.log(data)
+             if(data.deletedCount > 0){
+   
+               Swal.fire(
+                   'Deleted!',
+                   'Your Product has been deleted.',
+                   'success'
+                 )
+   
+          
+   
+               const remaning = deletes.filter( user => user._id !== _id)
+               setDelete(remaning)
+            
+           
+           }
+           
+           
+           })
+          }
+        })
 
-         }).then(res => res.json())
-         .then(data => console.log(data)) }
+       }
 
+     
 
     return (
         <div>
@@ -26,8 +64,8 @@ const Mycartcard = ({card}) => {
 
 <div>
 
-<div className="card card-side bg-base-100 shadow-xl border-2">
-<figure><img src={card?.photo}  className='w-[400px] h-[300px]' alt="Movie"/></figure>
+<div className="card card-side bg-base-100 dark:bg-black shadow-xl border-2">
+<figure><img src={card?.photo}  className='w-[400px] h-[300px] p-10' alt="Movie"/></figure>
 <div className="card-body">
 <h2 className="card-title">{card?.name}</h2>
 

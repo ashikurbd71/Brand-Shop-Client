@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Brand = ({ brand }) => {
   console.log(brand);
   return (
-    <div>
+    <div className="dark:bg-black ">
       <Link to={`/products/${brand.brand}`}>
         <div className=" bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
           <a href="#">

@@ -54,7 +54,7 @@ const Update = () => {
             <div>
                
         <div className="mx-auto  max-w-screen-xl px-5 lg:px-0">
-          <div className="bg-[#E2136E] min-h-screen my-10 py-10 lg:mx-20">
+          <div className="bg-[#E2136E] dark:bg-black min-h-screen my-10 py-10 lg:mx-20">
             <div className="text-center ">
               <h1 className="text-[#fff] text-[30px] font-bold">Update Product</h1>
               <p className="lg:px-28 px-5 py-4 font-medium text-[#fff]">

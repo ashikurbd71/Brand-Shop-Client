@@ -7,7 +7,7 @@ const Error = () => {
 
         <>
         <Navber></Navber>
-        <div className='min- min-h-screen my-10' style={{
+        <div className=' min-h-screen my-10' style={{
             backgroundImage: `url(${error})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
