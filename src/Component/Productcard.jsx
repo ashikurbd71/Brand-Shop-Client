@@ -9,10 +9,10 @@ const Productcard = ({ product }) => {
 
   return (
     <div>
-      <div className="w-full  bg-[#fff] border-2 border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+      <div className="  bg-[#fff] border-2 border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
         <a href="#">
           <img
-            className="p-8 rounded-t-lg"
+            className="p-8 rounded-t-lg w-[400px] h-[300px]"
             src={product?.photo}
             alt="product image"
           />

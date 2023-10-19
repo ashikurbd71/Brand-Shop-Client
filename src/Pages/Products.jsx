@@ -49,7 +49,7 @@ const Products = () => {
 </div>
         <div className=' min-h-screen mx-auto max-w-screen-xl my-10'>
             
-            <div className='grid grid-cols-1 px-5 lg:px-0 lg:grid-cols-3'>
+            <div className='grid grid-cols-1 gap-5 px-5 lg:px-0 lg:grid-cols-3'>
                 
            {
             productsdata?.map(product => <Productcard product={product} key={product._id}></Productcard>)
