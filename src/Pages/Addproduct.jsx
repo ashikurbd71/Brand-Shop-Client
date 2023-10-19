@@ -1,4 +1,5 @@
 import React from 'react';
+import toast from 'react-hot-toast';
 
 const Addproduct = () => {
 
@@ -30,7 +31,14 @@ const Addproduct = () => {
     })
 
     .then(res => res.json())
-    .then(data => console.log(data))
+    .then(data => {
+
+      console.log(data)
+
+      if(data.modifiedCount > 0){
+        toast.success('Product Added Successfuly!')
+       }
+    })
 
  }
 

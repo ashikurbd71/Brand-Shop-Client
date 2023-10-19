@@ -1,11 +1,34 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import toast from 'react-hot-toast';
+import { Link, useLoaderData } from 'react-router-dom';
 
 const Detlais = () => {
 
     const singledata = useLoaderData()
 
       console.log(singledata)
+
+      const handlecart = () => {
+
+        console.log('cart added')
+
+        fetch('http://localhost:5000/carts',{
+
+        method:'POST',
+        headers:{
+
+          'Content-Type' : 'application/json'
+        },
+
+        body:JSON.stringify(singledata)
+        })
+        .then(res => res.json())
+        .then(data => {
+
+          console.log(data)
+          toast.success('Product Add To Cart Successfuly!')
+        })
+      }
     return (
         <div className='min-h- min-h-screen mx-auto max-w-screen-xl my-10 px-5 lg:px-0'>
 
@@ -86,7 +109,7 @@ const Detlais = () => {
        </div>
 
     <div className="card-actions justify-end">
-      <button className="btn btn-neutral  btn-outline">Add Cart</button>
+     <Link> <button onClick={handlecart} className="btn btn-neutral  btn-outline">Add Cart</button></Link>
     </div>
   </div>
 </div>
