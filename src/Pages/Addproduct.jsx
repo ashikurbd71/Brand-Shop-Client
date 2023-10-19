@@ -50,10 +50,10 @@ const Addproduct = () => {
         <div>
            
     <div className="mx-auto  max-w-screen-xl px-5 lg:px-0">
-      <div className="bg-[#E2136E] min-h-screen my-10 py-10 mx-20">
+      <div className="bg-[#E2136E] min-h-screen my-10 py-10 lg:mx-20">
         <div className="text-center ">
           <h1 className="text-[#fff] text-[30px] font-bold">Add New Product</h1>
-          <p className="px-28 py-4 font-medium text-[#fff]">
+          <p className="lg:px-28 px-5 py-4 font-medium text-[#fff]">
             It is a long established fact that a reader will be distraceted by
             the readable content of a  page when looking at its layout.  The point
             of using Lorem Ipsum is that it has a more-or-less normal
@@ -63,9 +63,9 @@ const Addproduct = () => {
 
         <form onSubmit={handleadd}>
 
-         <div className="md:flex mx-10 mb-5">
+         <div className="lg:md:flex mx-10 mb-5">
 
-         <div className="form-control w-1/2">
+         <div className="form-control lg:w-1/2">
   <label className="label">
     <span className="label-text">Name</span>
   </label>
@@ -75,7 +75,7 @@ const Addproduct = () => {
   </label>
 </div>
 
-<div className="form-control w-1/2 ml-4">
+<div className="form-control lg:w-1/2 lg:ml-4">
   <label className="label">
     <span className="label-text">Brand Name</span>
   </label>
@@ -88,9 +88,9 @@ const Addproduct = () => {
          </div>
 
 
-         <div className="md:flex mx-10 mb-5">
+         <div className="lg:md:flex mx-10 mb-5">
 
-         <div className="form-control w-1/2">
+         <div className="form-control lg:w-1/2">
   <label className="label">
     <span className="label-text">Type</span>
   </label>
@@ -100,7 +100,7 @@ const Addproduct = () => {
   </label>
 </div>
 
-<div className="form-control w-1/2 ml-4">
+<div className="form-control lg:w-1/2 lg:ml-4">
   <label className="label">
     <span className="label-text">Price</span>
   </label>
@@ -113,9 +113,9 @@ const Addproduct = () => {
          </div>
 
 
-         <div className="md:flex mx-10 mb-5">
+         <div className="lg:md:flex mx-10 mb-5">
 
-<div className="form-control w-1/2">
+<div className="form-control lg:w-1/2">
 <label className="label">
 <span className="label-text">short description</span>
 </label>
@@ -125,7 +125,7 @@ const Addproduct = () => {
 </label>
 </div>
 
-<div className="form-control w-1/2 ml-4">
+<div className="form-control lg:w-1/2 lg:ml-4">
 <label className="label">
 <span className="label-text">Ratting</span>
 </label>

@@ -27,7 +27,7 @@ const Mycartcard = ({card}) => {
 <div>
 
 <div className="card card-side bg-base-100 shadow-xl border-2">
-<figure><img src={card?.photo} alt="Movie"/></figure>
+<figure><img src={card?.photo}  className='w-[400px] h-[300px]' alt="Movie"/></figure>
 <div className="card-body">
 <h2 className="card-title">{card?.name}</h2>
 

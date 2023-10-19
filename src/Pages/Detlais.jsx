@@ -42,7 +42,7 @@ const Detlais = () => {
             <div>
 
             <div className="card card-side bg-base-100 shadow-xl border-2">
-  <figure><img src={singledata?.photo} alt="Movie"/></figure>
+  <figure><img src={singledata?.photo} className='w-[400px] h-[300px]' alt="Movie"/></figure>
   <div className="card-body">
     <h2 className="card-title">{singledata?.name}</h2>
 
