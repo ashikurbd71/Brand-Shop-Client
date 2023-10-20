@@ -3,13 +3,13 @@ import why from "../assets/why.jpg";
 
 const Whychoseus = () => {
   return (
-    <div className="mx-auto max-w-screen-xl dark:bg-black">
+    <div className="mx-auto max-w-screen-xl ">
       <h1 className="lg:text-3xl text-2xl text-center font-bold text-[#E2136E] my-10">
         Why choose Us
       </h1>
 
-      <div className="flex justify-center dark:bg-black">
-        <p className="w-[700px] fon font-medium lg:text-lg mb-10 text-center px-5 lg:px-0">
+      <div className="flex justify-center dark:bg-slate-800">
+        <p className="w-[700px] fon font-medium lg:text-lg mb-10 text-black text-center px-5 lg:px-0">
           we're a destination of choice. With an unparalleled selection of
           top-tier products, a commitment to exceptional quality, and a passion
           for customer satisfaction, we're your trusted partner in finding the

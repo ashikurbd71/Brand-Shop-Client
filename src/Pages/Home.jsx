@@ -21,7 +21,7 @@ const Home = () => {
         </h1>
 
         <div className="flex justify-center items-center">
-        <p className="w-[700px] text-center mt-5  fon font-medium lg:text-lg px-5 lg:px-0">
+        <p className="w-[700px] text-center mt-5 text-black fon font-medium lg:text-lg px-5 lg:px-0">
           Discover the essence of BD Shop. Our brand stands for
           innovation, style, and uncompromising quality. Each product embodies
           our commitment to excellence, designed to elevate your lifestyle and

@@ -45,7 +45,7 @@ if(drakmode){
 
    return (
     <div>
-      <div className="navbar bg-[#E2136E] pb-5 ">
+      <div className="navbar bg-[#E2136E] dark:bg-slate-800 pb-5 ">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost  text-white lg:hidden">

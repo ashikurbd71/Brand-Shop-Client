@@ -13,7 +13,7 @@ const Mycart = () => {
 
         <>
         
-        <h1 className='text-center text-4xl font-bold text-slate-800 my-10'>My Product</h1>
+        <h1 className='text-center text-4xl text-black font-bold my-10'>My Product</h1>
 
         <hr className=' mx-20 fon font-extrabold pb-10' />
     

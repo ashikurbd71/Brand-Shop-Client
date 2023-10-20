@@ -2,7 +2,7 @@ import details from "../assets/details.jpg";
 const Detailsbanner = () => {
   return (
     <div
-      className=" lg:h-[500px] h-auto w-full bg-blend-overlay bg-opacity-90 dark:bg-black   bg-fixed"
+      className=" lg:h-[500px] h-auto w-full bg-blend-overlay bg-opacity-90 dark:bg-slate-800   bg-fixed"
       style={{
         backgroundImage: `url(${details})`,
         backgroundSize: "cover",

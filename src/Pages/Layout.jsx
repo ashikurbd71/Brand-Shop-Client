@@ -7,7 +7,7 @@ import { Toaster } from 'react-hot-toast';
 
 const Layout = () => {
     return (
-        <div className=' dark:bg-black'>
+        <div className='  dark:bg-slate-800'>
         <Navber></Navber>
         
          <div className=''>

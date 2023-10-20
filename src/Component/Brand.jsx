@@ -6,7 +6,7 @@ const Brand = ({ brand }) => {
   return (
     <div className="dark:bg-black ">
       <Link to={`/products/${brand.brand}`}>
-        <div className=" bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+        <div className=" bg-white border border-gray-200 rounded-lg shadow dark:bg-black dark:border-gray-700">
           <a href="#">
             <img
               className="rounded-t-lg w-[400px] h-[300px]"
