@@ -24,7 +24,7 @@ const Mycartcard = ({card,setDelete,deletes}) => {
           if (result.isConfirmed) {
            
 
-            fetch(`http://localhost:5000/users/${_id}`, {
+            fetch(`https://brand-shop-sever-2rw6jgw08-ashikur-rahman-ovis-projects.vercel.app/users/${_id}`, {
 
        
             method: 'DELETE'
@@ -64,7 +64,7 @@ const Mycartcard = ({card,setDelete,deletes}) => {
 
 <div>
 
-<div className="card card-side bg-base-100 dark:bg-black shadow-xl border-2">
+<div className="card lg:card-side bg-base-100 dark:bg-black shadow-xl border-2">
 <figure><img src={card?.photo}  className='w-[400px] h-[300px] p-10' alt="Movie"/></figure>
 <div className="card-body">
 <h2 className="card-title">{card?.name}</h2>

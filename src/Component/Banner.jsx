@@ -25,7 +25,7 @@ const Banner = () => {
         </p>
         </div>
 
- <div className="mt-10 pb-10 flex justify-center items-center mr-20">
+ <div className="mt-10 pb-10 px-10 flex justify-center items-center mr-20">
 
  <div>
  <input type="text" placeholder="serach product" className="input input-bordered rounded-none lg:w-[400px] pr-16" /> 

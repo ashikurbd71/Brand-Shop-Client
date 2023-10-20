@@ -25,7 +25,7 @@ const Update = () => {
         console.log(productinfo)
     
     
-        fetch(`http://localhost:5000/details/${updatedata?._id}`,{
+        fetch(`https://brand-shop-sever-2rw6jgw08-ashikur-rahman-ovis-projects.vercel.app/details/${updatedata?._id}`,{
     
         method:'PUT',
         headers:{

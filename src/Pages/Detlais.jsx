@@ -31,7 +31,7 @@ const Detlais = () => {
 
         console.log('cart added')
 
-        fetch('http://localhost:5000/carts',{
+        fetch('https://brand-shop-sever-2rw6jgw08-ashikur-rahman-ovis-projects.vercel.app/carts',{
 
         method:'POST',
         headers:{

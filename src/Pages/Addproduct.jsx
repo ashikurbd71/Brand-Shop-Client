@@ -20,7 +20,7 @@ const Addproduct = () => {
     console.log(productinfo)
 
 
-    fetch('http://localhost:5000/products',{
+    fetch('https://brand-shop-sever-2rw6jgw08-ashikur-rahman-ovis-projects.vercel.app/products',{
 
     method:'POST',
     headers:{
