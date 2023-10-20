@@ -157,7 +157,7 @@ if(drakmode){
     <button onClick={() => setDrakmode(!drakmode)}>
 
  {
-  drakmode? <CiLight></CiLight> : <MdDarkMode></MdDarkMode>}
+  drakmode? <CiLight className='text-white'></CiLight> : <MdDarkMode></MdDarkMode>}
     </button>
       
 

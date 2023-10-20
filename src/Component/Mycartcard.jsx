@@ -60,6 +60,7 @@ const Mycartcard = ({card,setDelete,deletes}) => {
 
     return (
         <div>
+
             
 
 <div>

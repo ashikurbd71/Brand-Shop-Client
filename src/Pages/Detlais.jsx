@@ -1,7 +1,8 @@
 import React from 'react';
 import toast from 'react-hot-toast';
 import { Link, useLoaderData } from 'react-router-dom';
-import islide from '../assets/islide.jpeg'
+import Detailsbanner from '../Component/Detailsbanner';
+
 const Detlais = () => {
 
     const singledata = useLoaderData()
@@ -53,12 +54,16 @@ const Detlais = () => {
 
           <>
 
+        <Detailsbanner></Detailsbanner>
+          
 
         <div className=' min-h-screen mx-auto max-w-screen-xl my-10 px-5 lg:px-0'>
 
 
 
             <div>
+
+              
 
             <div className="card lg:card-side bg-base-100 dark:bg-black shadow-xl border-2 my-20">
   <figure><img src={singledata?.photo} className='w-[400px] h-[300px] p-10' alt="Movie"/></figure>
