@@ -23,7 +23,7 @@ const Mycart = () => {
 
 
                 {
-                    deletes.length > 0 ? 
+                    deletes?.length > 0 ? 
                     
                     deletes?.map(card => <Mycartcard card={card} setDelete={setDelete} deletes={deletes} key={card._id}></Mycartcard>) : <h1 className='lg:text-4xl text-xl text-red-500 font-bold text-center my-32'>Not Found Any Products</h1>
                    

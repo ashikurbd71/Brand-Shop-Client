@@ -31,7 +31,9 @@ const Products = () => {
             <div className='grid grid-cols-1 gap-5 px-5 lg:px-0 lg:grid-cols-3'>
                 
            {
-            productsdata?.map(product => <Productcard product={product} key={product._id}></Productcard>)
+
+            productsdata?.length > 0 ?
+            productsdata?.map(product => <Productcard product={product} key={product._id}></Productcard>) : <h1 className='lg:text-4xl text-xl text-red-500 font-bold text-center my-32'>Not Found Any Products</h1>
            }
 
             </div>
