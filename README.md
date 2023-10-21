@@ -8,7 +8,7 @@
 
 .Click on Edcut button.  Clicked products will be added to My Card page.  And if you want, you can go to the My Card page and see the cards you have added.  and can delete.
 
-.There are four private routes on our website.  Add Card, My Card Product Details, Update, User cannot enter these sections without login.User image and name are shown when user login.  And a default image will be shown to the user when he is not logged in.  And if the user wants to log out by clicking on his profile image, the log out button will drop down.
+*There are four private routes on our website.  Add Card, My Card Product Details, Update, User cannot enter these sections without login.User image and name are shown when user login.  And a default image will be shown to the user when he is not logged in.  And if the user wants to log out by clicking on his profile image, the log out button will drop down.
 
 
 # LIVE LINK : https://bd-shop-b06a9.web.app/
