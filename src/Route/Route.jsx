@@ -31,7 +31,7 @@ import Privteroute from '../Pages/Privteroute';
             {
                 path:"/mycart",
                 element:<Privteroute><Mycart></Mycart></Privteroute>,
-                loader:() => fetch('https://brand-shop-sever-2rw6jgw08-ashikur-rahman-ovis-projects.vercel.app/carts')
+                loader:() => fetch('https://brand-shop-sever.vercel.app/carts')
             },
             {
                 path:"/login",
@@ -44,22 +44,23 @@ import Privteroute from '../Pages/Privteroute';
             {
                 path:'/products/:brand',
                 element:<Products></Products>,
-                loader:({params}) => fetch(`https://brand-shop-sever-2rw6jgw08-ashikur-rahman-ovis-projects.vercel.app/products/${params.brand}`)
+                loader:({params}) => fetch(`https://brand-shop-sever.vercel.app/products/${params.brand}`)
             },
             {
                path:"/update/:id",
                element:<Privteroute><Update></Update></Privteroute>,
-               loader: ({params}) => fetch(`https://brand-shop-sever-2rw6jgw08-ashikur-rahman-ovis-projects.vercel.app/details/${params.id}`)
+               loader: ({params}) => fetch(`https://brand-shop-sever.vercel.app/details/${params.id}`)
                
             },
             {
                 path:"/detlais/:id",
                 element:<Privteroute><Detlais></Detlais></Privteroute>,
-                loader:({params}) => fetch(`https://brand-shop-sever-2rw6jgw08-ashikur-rahman-ovis-projects.vercel.app/details/${params.id}`)
+                loader:({params}) => fetch(`https://brand-shop-sever.vercel.app/details/${params.id}`)
 
              }
-        ]
-    }
+
+            
+        ] }
  ])
 
 export default router;

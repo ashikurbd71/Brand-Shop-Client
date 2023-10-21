@@ -24,7 +24,7 @@ const Mycartcard = ({card,setDelete,deletes}) => {
           if (result.isConfirmed) {
            
 
-            fetch(`https://brand-shop-sever-2rw6jgw08-ashikur-rahman-ovis-projects.vercel.app/users/${_id}`, {
+            fetch(`https://brand-shop-sever.vercel.app/users/${_id}`, {
 
        
             method: 'DELETE'

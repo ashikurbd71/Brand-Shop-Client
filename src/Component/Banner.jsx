@@ -3,7 +3,7 @@ import cover from "../assets/cover-1.jpg";
 const Banner = () => {
   return (
     <div
-      className=" min-h-screen w-full bg-blend-overlay bg-opacity-90 dark:bg-black   bg-fixed"
+      className=" min-h-screen w-full bg-blend-overlay bg-opacity-90 dark:bg-slate-800 bg-fixed"
       style={{
         backgroundImage: `url(${cover})`,
         backgroundSize: "cover",
@@ -16,7 +16,7 @@ const Banner = () => {
         <h1 className="mb-5 lg:text-5xl text-3xl font text-[#E2136E] font-extrabold">Unleashing Creativity</h1>
 
          <div className="flex justify-center">
-        <p className="w-[700px] lg:text-xl text-lg font-medium px-5 lg:px-0 ">
+        <p className="w-[700px] lg:text-xl text-lg text-black font-medium px-5 lg:px-0 ">
           Welcome to our one-stop shop, where versatility meets variety! Explore
           a world of endless choices at BD shop. Discover the perfect blend of quality,
           style, and affordability as you navigate through our diverse product

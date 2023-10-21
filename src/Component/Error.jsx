@@ -7,11 +7,15 @@ const Error = () => {
 
         <>
         <Navber></Navber>
-        <div className=' min-h-screen  dark:bg-slate-800 my-10'>
 
-         <img src={error} alt="" className='w-full my-44 lg:my-0' />
-           
-        </div>
+         <div className=' dark:bg-slate-800 '>
+         <div className=' min-h-screen my-10 '>
+
+<img src={error} alt="" className='w-full my-44 lg:my-0' />
+  
+</div>
+         </div>
+        
        <Footer></Footer>
         </>
     );

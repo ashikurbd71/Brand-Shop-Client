@@ -20,7 +20,7 @@ const Addproduct = () => {
     console.log(productinfo)
 
 
-    fetch('https://brand-shop-sever-2rw6jgw08-ashikur-rahman-ovis-projects.vercel.app/products',{
+    fetch('https://brand-shop-sever.vercel.app/products',{
 
     method:'POST',
     headers:{
@@ -50,7 +50,7 @@ const Addproduct = () => {
         <div className=''>
            
     <div className="mx-auto  max-w-screen-xl px-5 lg:px-0">
-      <div className="bg-[#E2136E]  dark:bg-slate-800 min-h-screen my-10 py-10 lg:mx-20">
+      <div className="bg-[#E2136E]  dark:bg-black min-h-screen my-10 py-10 lg:mx-20">
         <div className="text-center ">
           <h1 className="text-[#fff] text-[30px] font-bold">Add New Product</h1>
           <p className="lg:px-28 px-5 py-4 font-medium text-[#fff]">

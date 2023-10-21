@@ -17,7 +17,13 @@ const Whychoseus = () => {
         </p>
       </div>
 
-      <img src={why} alt="" className="h-[500px] w-full px-5 lg:px-0 mb-5 lg:mb-0" />
+      {/* <img src={why} alt="" className="h-[500px] w-full px-5 lg:px-0 mb-5 lg:mb-0 dark:bg-slate-800 " /> */}
+
+      <div className="h-[500px] w-full px-5 lg:px-0 mb-5 lg:mb-0 dark:bg-slate-800 bg-fixed" style={{
+        backgroundImage: `url(${why})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      } }></div>
       <div className="grid lg:grid-cols-4 grid-cols-1 px-5 lg:px-0 gap-5 lg:gap-0">
         <div className=" rounded-none p-5 bg-[#FFFFFF] dark:bg-black border-2">
           <div>

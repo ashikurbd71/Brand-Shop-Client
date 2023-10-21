@@ -44,7 +44,7 @@ if(drakmode){
   }
 
    return (
-    <div>
+    <div className='sta '>
       <div className="navbar bg-[#E2136E] dark:bg-slate-800 pb-5 ">
         <div className="navbar-start">
           <div className="dropdown">
