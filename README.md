@@ -11,7 +11,7 @@
 .There are four private routes on our website.  Add Card, My Card Product Details, Update, User cannot enter these sections without login.User image and name are shown when user login.  And a default image will be shown to the user when he is not logged in.  And if the user wants to log out by clicking on his profile image, the log out button will drop down.
 
 # Use Technologics : 
-.Tailwind CSS .JavaScript .React Js .Node Js .Express Js .MongoDB .Firebase
+.Tailwind CSS .JavaScript .React Js .Node Js .Express Js .MongoDB .Firebase .jwt
 
 # Web Tools : 
 .Git .Github .Surge .Vercel
